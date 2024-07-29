@@ -8,7 +8,7 @@ export default function App() {
     const fetchUserEmail = async () => {
         try {
             // Use the login name from the SharePoint context
-
+            console.log({ sp });
             const user = await sp.web.currentUser();
             console.log({ user });
             setUserEmail(user.Email);
