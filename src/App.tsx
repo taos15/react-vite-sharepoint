@@ -7,8 +7,9 @@ export default function App() {
         try {
             // Use the login name from the SharePoint context
             console.log({ sp });
-            const user = await sp?.web?.currentUser();
-            console.log({ user });
+            const webData = await sp.web();
+            console.log("Next is the web data");
+            console.log(webData);
         } catch (error) {
             console.error("Error fetching user email: ", error);
         }
