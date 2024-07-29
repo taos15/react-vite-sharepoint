@@ -14,6 +14,7 @@ let sp: ReturnType<typeof spfi>;
 
 export function setupPnP() {
     if (window._spPageContextInfo) {
+        console.log(window._spPageContextInfo);
         sp = spfi().using(SPFx({ pageContext: window._spPageContextInfo }));
         console.log("PnPjs initialized with SharePoint context.");
     } else {
