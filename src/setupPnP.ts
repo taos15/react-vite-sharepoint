@@ -10,7 +10,7 @@ declare global {
     }
 }
 
-let sp: ReturnType<typeof spfi>;
+let sp: ReturnType<typeof spfi> | null = null;
 
 export function setupPnP() {
     if (window._spPageContextInfo) {
