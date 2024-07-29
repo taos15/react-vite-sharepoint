@@ -7,7 +7,7 @@ export default function App() {
         try {
             // Use the login name from the SharePoint context
             console.log({ sp });
-            const user = await sp.web.currentUser();
+            const user = await sp?.web?.currentUser();
             console.log({ user });
         } catch (error) {
             console.error("Error fetching user email: ", error);
@@ -16,7 +16,7 @@ export default function App() {
 
     useEffect(() => {
         fetchUserEmail();
-    }, []);
+    });
 
     return (
         <div>
