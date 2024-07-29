@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@pnp/common": "^2.15.0",
+    "@pnp/logging": "^4.3.0",
+    "@pnp/odata": "^2.15.0",
+    "@pnp/sp": "^4.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

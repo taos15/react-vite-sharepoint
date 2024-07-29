@@ -8,6 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@pnp/common':
+        specifier: ^2.15.0
+        version: 2.15.0
+      '@pnp/logging':
+        specifier: ^4.3.0
+        version: 4.3.0
+      '@pnp/odata':
+        specifier: ^2.15.0
+        version: 2.15.0
+      '@pnp/sp':
+        specifier: ^4.3.0
+        version: 4.3.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -267,6 +279,31 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@pnp/common@2.15.0':
+    resolution: {integrity: sha512-lyK5LIet6xh0wXPvnMpOKU7cK1aRuLAJK+TxWUsg44fmoda4w316pWycTyWelaJYXnqZT2OOoz996Zpkc6t76w==}
+
+  '@pnp/core@4.3.0':
+    resolution: {integrity: sha512-aTCx1gLCKOZIG6B1ArqZGTVPEVM//UCyjApY6DHJSQL65OdlSUS/ik5HpNttxF88XWOUY3sYY2V0qVI0bBvarA==}
+    engines: {node: '>=18.12.0'}
+
+  '@pnp/logging@2.15.0':
+    resolution: {integrity: sha512-rgpQl38AR3d/HJE6OxoTnAYx3DiaWmWmbMPlDvP26uxvtjdFKAkBriuAdVFWrVTTVupNZdqsMfEbr+YVG+tTBA==}
+
+  '@pnp/logging@4.3.0':
+    resolution: {integrity: sha512-ebf1MSK1AFtXKGf52v1cBfC9h+VHal3hDPxyVH/NCXDiN/PnX78PTjnRHMrtou73q59npQ8ohgXGcyxhA6W60Q==}
+    engines: {node: '>=18.12.0'}
+
+  '@pnp/odata@2.15.0':
+    resolution: {integrity: sha512-FFwdGi138etmgHVYY4BmsT7ytd3X2Q6AFRqU2UEoyIJW0YLXpj3s46pS4Ia1uTafJpF9/xEy5BAVYHq9dZNn8Q==}
+
+  '@pnp/queryable@4.3.0':
+    resolution: {integrity: sha512-oeYvpYsfZ61sEakGvLMVyUmB8IOXZ+VALjh/rCVzKYURe72XHdJc0n4qXcLAy/FxNwnzhb4XPDxM+R2+0k6fqw==}
+    engines: {node: '>=18.12.0'}
+
+  '@pnp/sp@4.3.0':
+    resolution: {integrity: sha512-+dZ75tGpRnodKbSSFf3LmggENqnq+54L9IIO74iTrUWXvq8MCTwdD0EuNgGLrOxHVtpfBMSWWYKlkCRhjZ6OAQ==}
+    engines: {node: '>=18.12.0'}
 
   '@rollup/rollup-android-arm-eabi@4.19.1':
     resolution: {integrity: sha512-XzqSg714++M+FXhHfXpS1tDnNZNpgxxuGZWlRG/jSj+VEPmZ0yg6jV4E0AL3uyBKxO8mO3xtOsP5mQ+XLfrlww==}
@@ -1203,6 +1240,12 @@ packages:
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
+  tslib@2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+
+  tslib@2.6.3:
+    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
+
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -1433,6 +1476,39 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
+
+  '@pnp/common@2.15.0':
+    dependencies:
+      tslib: 2.3.0
+
+  '@pnp/core@4.3.0':
+    dependencies:
+      tslib: 2.6.3
+
+  '@pnp/logging@2.15.0':
+    dependencies:
+      tslib: 2.3.0
+
+  '@pnp/logging@4.3.0':
+    dependencies:
+      tslib: 2.6.3
+
+  '@pnp/odata@2.15.0':
+    dependencies:
+      '@pnp/common': 2.15.0
+      '@pnp/logging': 2.15.0
+      tslib: 2.3.0
+
+  '@pnp/queryable@4.3.0':
+    dependencies:
+      '@pnp/core': 4.3.0
+      tslib: 2.6.3
+
+  '@pnp/sp@4.3.0':
+    dependencies:
+      '@pnp/core': 4.3.0
+      '@pnp/queryable': 4.3.0
+      tslib: 2.6.3
 
   '@rollup/rollup-android-arm-eabi@4.19.1':
     optional: true
@@ -2359,6 +2435,10 @@ snapshots:
       typescript: 5.5.4
 
   ts-interface-checker@0.1.13: {}
+
+  tslib@2.3.0: {}
+
+  tslib@2.6.3: {}
 
   type-check@0.4.0:
     dependencies:
